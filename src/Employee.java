@@ -1,8 +1,9 @@
 public class Employee {
-    private String EmployeeName= "Not Assigned";
+    private String EmployeeName = "Not Assigned";
     private String EmployeeNumber = "XXX-L";
     //xxx = number from 0-9 for each x and L = letter from a-m depending on hire date e.g. January = a, December = m
-    private String HireDate= "Not Assigned";
+    //protected String HireDate = "Not Assigned";
+    private Month hireMonth;
 
 
     public void setEmployeeName(String name) {
@@ -13,7 +14,7 @@ public class Employee {
         return EmployeeName;
     }
 
-    public void setEmployeeNumber(String number){
+    public void setEmployeeNumber(String number) {
         EmployeeNumber = number;
     }
 
@@ -21,13 +22,12 @@ public class Employee {
         return EmployeeNumber;
     }
 
-    public void setHireDate(String hireDate) {
-        HireDate = hireDate;
+    public void setHireMonth(Month hireMonth) {
+        this.hireMonth = hireMonth;
     }
 
-    public String getHireDate() {
-        return HireDate;
+    public String getHireMonth() {
+        return hireMonth.getLetter();
+    }
     }
 
-
-}

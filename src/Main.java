@@ -1,5 +1,6 @@
+import java.util.Objects;
 import java.util.Scanner;
-
+//INSTRUCTIONS
 /* Employee and ProductionWorker Classes
 Design a class named Employee. The class should keep the following information in fields:
 • Employee name
@@ -25,8 +26,9 @@ public class Main {
         System.out.println("Please set the employee number. (XXX-L)");
         employee.setEmployeeNumber(keyboard.nextLine());
         System.out.println("What is the employee's hire date (use letters a-m e.g. a = January, m = December)");
-        employee.setHireDate(keyboard.nextLine());
-        System.out.println();
+        String hireMonthInput = keyboard.nextLine();
+        Month hireMonth = Month.fromLetter(hireMonthInput.toLowerCase()); // Convert to lowercase for case-insensitivity
+        employee.setHireMonth(hireMonth);
 
         ProductionWorker worker = new ProductionWorker(); //creates instance of ProductionWorker
         System.out.println("Assuming this is a production worker what is their hourly wage?");
@@ -35,8 +37,10 @@ public class Main {
         worker.setShift(keyboard.nextInt());
 
         System.out.println(employee + "\nThe employee name is " + employee.getEmployeeName() + "\n" + "The employee number is " + employee.getEmployeeNumber()
-        + "\nThe employee hire date is " + employee.getHireDate() +"\n" + worker + "\nThe Production Worker's wage is " + worker.getHourlyRate() +
+        + "\nThe employee hire date is " + hireMonth +"\n" + worker + "\nThe Production Worker's wage is " + worker.getHourlyRate() +
                 "\nThe Production Worker's Shift is " + worker.getShift());
+
+
 
         keyboard.close(); //shuts down the scanner
     }

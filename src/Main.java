@@ -17,6 +17,7 @@ The day shift is shift 1 and the night shift is shift 2. Write one or more const
 public class Main {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
+        System.out.println(keyboard.nextLine());
+        System.out.println("this is main");
         }
     }
-}

@@ -16,9 +16,24 @@ The day shift is shift 1 and the night shift is shift 2. Write one or more const
  Demonstrate the classes by writing a program that uses a ProductionWorker object.*/
 public class Main {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println(keyboard.nextLine());
         System.out.println("this is main");
+        Scanner keyboard = new Scanner(System.in); //takes user input
 
-        }
+        Employee employee = new Employee(); //creates an instance of Employee
+        System.out.println("Please set the employee name.");
+        employee.setEmployeeName(keyboard.nextLine());
+        System.out.println("Please set the employee number. (XXX-L)");
+        employee.setEmployeeNumber(keyboard.nextLine());
+        System.out.println("What is the employee's hire date (use letters a-m e.g. a = January, m = December)");
+        employee.setHireDate(keyboard.nextLine());
+        System.out.println();
+
+        ProductionWorker worker = new ProductionWorker(); //creates instance of ProductionWorker
+        System.out.println("Assuming this is a production worker what is their hourly wage?");
+        worker.setHourlyRate(keyboard.nextDouble());
+        System.out.println("What is their shift? 1 - Day Shift 2 - Night Shift");
+        worker.setShift(keyboard.nextInt());
+
+        keyboard.close(); //shuts down the scanner
+    }
     }

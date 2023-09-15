@@ -19,5 +19,6 @@ public class Main {
         Scanner keyboard = new Scanner(System.in);
         System.out.println(keyboard.nextLine());
         System.out.println("this is main");
+
         }
     }

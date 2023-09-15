@@ -4,6 +4,7 @@ public class Employee {
     //xxx = number from 0-9 for each x and L = letter from a-m depending on hire date e.g. January = a, December = m
     private String HireDate= "Not Assigned";
 
+
     public void setEmployeeName(String name) {
         EmployeeName = name;
     }
@@ -27,4 +28,6 @@ public class Employee {
     public String getHireDate() {
         return HireDate;
     }
+
+
 }

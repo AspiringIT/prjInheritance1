@@ -34,6 +34,10 @@ public class Main {
         System.out.println("What is their shift? 1 - Day Shift 2 - Night Shift");
         worker.setShift(keyboard.nextInt());
 
+        System.out.println(employee + "\nThe employee name is " + employee.getEmployeeName() + "\n" + "The employee number is " + employee.getEmployeeNumber()
+        + "\nThe employee hire date is " + employee.getHireDate() +"\n" + worker + "\nThe Production Worker's wage is " + worker.getHourlyRate() +
+                "\nThe Production Worker's Shift is " + worker.getShift());
+
         keyboard.close(); //shuts down the scanner
     }
     }

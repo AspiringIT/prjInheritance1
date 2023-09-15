@@ -1,5 +1,5 @@
 public class ProductionWorker extends Employee {
-    protected int Shift; // 1 = day shift, 2 = night shift
+    protected String Shift; // 1 = day shift, 2 = night shift
     protected double HourlyRate;
 
     public void setHourlyRate(double hourlyRate) {
@@ -11,10 +11,17 @@ public class ProductionWorker extends Employee {
     }
 
     public void setShift(int Shift){
-        this.Shift = Shift;
+        if(Shift == 1) {
+            this.Shift = "Day Shift";
+        }
+            else if(Shift ==2) {
+            this.Shift = "Night Shift";
+
+
+        }
     }
 
-    public int getShift() {
+    public String getShift() {
         return Shift;
     }
 }

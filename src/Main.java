@@ -16,7 +16,7 @@ The day shift is shift 1 and the night shift is shift 2. Write one or more const
  Demonstrate the classes by writing a program that uses a ProductionWorker object.*/
 public class Main {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner();
+        Scanner keyboard = new Scanner(System.in);
         }
     }
 }
